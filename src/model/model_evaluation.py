@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score,precision_score,recall_score, roc_auc
 # fetch the data from pickle
 
 clf = pickle.load(open('model.pkl','rb'))
-test_data = pd.read_csv('./data/features/test_bow.csv')
+test_data = pd.read_csv('./data/features/test_tfidf.csv')
 
 X_test = test_data.iloc[:,0:-1].values
 y_test = test_data.iloc[:,-1].values
